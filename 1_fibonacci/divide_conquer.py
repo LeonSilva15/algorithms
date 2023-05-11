@@ -19,7 +19,7 @@ def calculate( matrix, n ):
     if( n % 2 == 0 ):
         count += 1
         return calculate( np.dot( matrix, matrix ), n // 2 )
-    # Case having odd exponentail n
+    # Case having odd exponential n
     # Multiply the matrix by the product of the exponentiated matrix
     count += 2
     return np.dot( matrix, calculate( np.dot( matrix, matrix ), n // 2 ) )
